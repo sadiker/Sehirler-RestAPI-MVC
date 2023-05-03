@@ -1,0 +1,26 @@
+#a1{
+    background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
+}
+
+#a2{
+    background-color: #251ca7;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
+}
+
+#a1:hover{
+    background-color: #06f02d;
+}
+#a2:hover{
+    background-color: #06f02d;
+}

@@ -1,0 +1,29 @@
+#city-container {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    margin-top: 50px;
+    }
+#city-image{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 50%;
+  border: 5px solid black;
+  border-radius: 10px;
+ 
+}
+#city-name{
+    font-size: 5em;
+    text-align: center;
+}
+#city-plate{
+    text-align: center;
+}
+#city-region{
+    text-align: center;
+}
+body{
+    background-color: rgb(155, 223, 219);
+}
