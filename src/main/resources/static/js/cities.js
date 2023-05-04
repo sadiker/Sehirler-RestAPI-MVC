@@ -5,7 +5,7 @@ fetch("http://localhost:8080/cities")
   .then(response => response.json())
   .then(data => {
     cities.push(...data);
-    setInterval(showNextCity, 700);
+    setInterval(showNextCity, 2000);
   });
 
 function showNextCity() {
