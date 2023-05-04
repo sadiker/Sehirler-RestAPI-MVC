@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,10 +14,12 @@ import com.sadiker.cities.service.CityService;
 
 @RestController
 public class ApiController {
+
     @Autowired
     CityService cityService;
 
     @GetMapping("/cities")
+
     public List<City> getAll() {
         return cityService.findAll();
     }
@@ -29,6 +32,11 @@ public class ApiController {
     @GetMapping("/cities/{plate}")
     public ResponseEntity<Object> getByPlate(@PathVariable("plate") String plate) {
         return cityService.getByPlate(plate);
+    }
+
+    @DeleteMapping("/cities/{plate}")
+    public String deleteByPlate(@PathVariable("plate") String plate) {
+        return cityService.deleteByPlate(plate);
     }
 
 }
