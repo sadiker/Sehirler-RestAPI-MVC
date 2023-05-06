@@ -9,6 +9,7 @@ import org.springframework.cache.annotation.Caching;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -36,9 +37,10 @@ public class CityService {
                 City.class);
 
         if (city != null) {
-            return ResponseEntity.ok(city);
-        }
-        return ResponseEntity.ok("Bulunamadı..");
+            return new ResponseEntity<>(city,HttpStatus.OK);
+        } 
+            return new ResponseEntity<>("Bulunamadı...",HttpStatus.BAD_REQUEST);
+   
 
     }
 

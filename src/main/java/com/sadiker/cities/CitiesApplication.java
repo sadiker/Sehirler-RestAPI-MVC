@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 import com.sadiker.cities.model.City;
 import com.sadiker.cities.repository.CityRepository;
-import com.sadiker.cities.service.CityService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
