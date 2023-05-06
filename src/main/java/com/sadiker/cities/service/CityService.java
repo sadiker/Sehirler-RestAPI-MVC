@@ -44,6 +44,11 @@ public class CityService {
 
     @Cacheable("cities")
     public List<City> findAll() {
+        try {
+            Thread.sleep(8000);
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        } 
         return cityRepository.findAll();
 
     }
